@@ -22,7 +22,7 @@ export function usePriceWebSocket() {
   const ws = useRef<WebSocket | null>(null);
 
   const connect = useCallback((windowSeconds: number = 6000) => {
-    const url = `ws://localhost:8080/ws?window=${windowSeconds}`;
+    const url = `wss://additamentary-ettie-unrefining.ngrok-free.app/ws?window=${windowSeconds}`;
 
     try {
       ws.current = new WebSocket(url);
